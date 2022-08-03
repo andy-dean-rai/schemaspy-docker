@@ -13,7 +13,7 @@ See also: https://github.com/bcgov/schemaspy
 ## Sample Docker build command
 
 ```
-docker build -t schemaspy https://github.com/marcocali/schemaspy-docker.git
+docker build -t schemaspy https://github.com/andy-dean-rai/schemaspy-docker.git
 ```
 
 ## Sample MySQL Usage
@@ -65,3 +65,6 @@ docker run -ti --rm --name schemaspy \
 
 `DATABASE_USER`, `DATABASE_PASSWORD`: The username and password used to establish
 	the database connection.
+
+`SKIP_WEBSERVER`: If this env variable is set to anything, just exit after generating
+    the schemaspy output. Don't start the webserver.

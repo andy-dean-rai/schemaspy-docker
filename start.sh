@@ -71,5 +71,7 @@ if [ ! -f "$OUTPUT_PATH/index.html" ]; then
 fi
 
 # busybox httpd
-echo "Starting webserver on port $SERVER_PORT"
-httpd -f -p $SERVER_PORT -h "$OUTPUT_PATH"
+if [ -z ${SKIP_WEBSERVER+x} ]; then
+    echo "Starting webserver on port $SERVER_PORT"
+    httpd -f -p $SERVER_PORT -h "$OUTPUT_PATH"
+fi
